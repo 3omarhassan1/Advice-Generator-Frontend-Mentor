@@ -1,0 +1,128 @@
+/* start global rules */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+:root {
+  --maincolor: hsl(150, 100%, 66%);
+  --text-color: hsl(193, 38%, 86%);
+  --bgcolor2: #313a49;
+  --seccolor: #202732;
+  --rad: 16px;
+}
+
+body {
+  font-family: 'Manrope',
+    sans-serif;
+  color: var(--text-color);
+  min-height: 100vh;
+  background-color: var(--seccolor);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+span {
+  color: var(--maincolor);
+  letter-spacing: 3px;
+  font-size: .7rem;
+  font-weight: 600;
+}
+
+button {
+  border: none;
+  background-color: var(--maincolor);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30px;
+}
+
+button:hover {
+  box-shadow: 0 0 30px 0px hsl(150deg 100% 66%)
+}
+
+/* end global rules */
+
+/* start my framework */
+
+.mob {
+  display: none;
+}
+
+.shad {
+  box-shadow: 0 20px 60px 0 rgb(0 0 0 / 25%);
+}
+
+.my-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.fill-text {
+  fill: var(--text-color);
+}
+
+.fill-sec {
+  fill: #4F5D74;
+}
+
+/* end my framework */
+
+main {
+  background-color: var(--bgcolor2);
+  border-radius: var(--rad);
+  max-width: 550px;
+  margin: 0 40px 0 40px;
+  padding: 3rem;
+}
+
+.advice {
+  font-size: 28px;
+}
+
+.attribution {
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--maincolor);
+  width: 100%;
+  text-align: center;
+  color: var(--seccolor);
+  padding: .4em;
+  position: absolute;
+  bottom: 0;
+  margin-top: auto;
+}
+
+.attribution a {
+  text-decoration: underline;
+}
+
+.attribution a:hover {
+  color: rgb(0, 97, 177);
+}
+
+
+@media (max-width:600px) {
+  .mob {
+    display: block;
+  }
+
+  .desk {
+    display: none;
+  }
+
+  main {
+    padding: 3rem 1.5rem;
+  }
+}
